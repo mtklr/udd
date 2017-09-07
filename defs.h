@@ -48,6 +48,11 @@
 #define FIL_LVL_LK "lvl.lck"
 #define FIL_LVL_LD "."
 
+/* UID to access operator mode. */
+#ifndef WIZ_UID
+#define WIZ_UID 54171
+#endif
+
 /*
  * E N D   O F   C O N F I G U R A T I O N   S E C T I O N
  *

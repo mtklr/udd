@@ -12,7 +12,7 @@ HDRS	      = cbt.h \
 		data.h \
 		defs.h
 
-CFLAGS	      = -g
+CFLAGS	      = -g -DWIZ_UID=$(shell echo $$UID)
 
 LDFLAGS	      = -lm
 

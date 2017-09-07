@@ -29,7 +29,7 @@ int swb_wiz()      /* 1=access to operator program and no password kill */
 		   /* 0=normal user */
 
 {
-  if (getuid() == 54171)       /* uid 54171 = chuck */
+  if (getuid() == WIZ_UID)       /* uid 54171 = chuck */
     return(1);
   else
     return(0);
