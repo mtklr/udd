@@ -1,0 +1,22 @@
+
+here is the distribution for "udd" a unix version of classic PDP-11/VAX
+DND game.   See "VERSION" for the history.   This is version V5.1C-07.
+
+HOW TO COMPILE:
+ 1. determine where the game is going to live.  by default it is set
+    to run out of the current directory.  if you want to change that
+    (e.g. have it look for its files in /usr/games/lib) edit the top
+    section of defs.h (change FIL_*).
+
+ 2. if you want access to the operator program, edit swb_file.c swb_wiz().
+
+ 3. "make" --- current make files compiles with all debugging.  edit
+    makefile to change this.  if you get compile errors on unix.c, try
+    inverting the OLDTTY define in that file (default is now to use termios).
+
+ 4. run ./udd, it should go.
+
+sorry there isn't more documentation (especially WRT the operator
+program).
+
+Chuck Cranor <chuck@research.att.com>, 07-Feb-2001

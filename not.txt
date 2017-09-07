@@ -1,0 +1,21 @@
+
+	Welcome to UDD!  This is the "C" version 5.1, patchlevel 08  (V5.1C-08)
+	Via: Chuck Cranor <chuck@research.att.com>, 07-Feb-2001
+
+PROGRAM HISTORY:
+	V1.0  - created May 1976 by Daniel M Lawrence (basic+2 version?)
+	V2.0  - various fixes by RJS, RSB, JLB, and DAS (V2A, V2B, etc...)
+	V3.0  - converted to VAX BASIC (David Solomon)
+	V4.0  - new operator module and management functions (John Rich,
+			Project DIRECT, 1984, Greenville, DE.)
+	V4.1  - ported back to PDP-11 BASIC-PLUS2 with minor cleanups
+			(Chuck Cranor, A.I. duPont High School, summer 1984,
+			Greenville, DE.)
+	V4.1C - aborted first attempt to convert to C and Unix
+			(Chuck Cranor, University of Delaware, summer 1986)
+	V5.0C - first working "C" version under Unix (Chuck Cranor,
+			Washington University, St. Louis, MO., August 1989)
+	V5.1C - Re-wrote char file routines to avoid conflicts (it
+		never really worked in any other version!)
+			(Chuck Cranor, Washington University, 03-Sep-89)
+
