@@ -55,7 +55,7 @@ int dlvl_choose()
   if (tmp2 >= n_dlvl) {
     printf("Gee, all dungeons are closed?  Time to punt...\r\n");
     printf("You better find a dungeon operator!\r\n");
-    return;
+    return(0);
   }
   printf("Press the number of the dungeon, or <CR> to ");
   if (u.c[18] == 0)
