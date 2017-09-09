@@ -7,8 +7,11 @@
  *
  */
 
-#include "defs.h"
 #include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "defs.h"
 
 int trs_chest()
 

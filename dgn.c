@@ -7,9 +7,10 @@
  *
  */
 
-#include <stdio.h>
-#include <strings.h>
 #include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
 #include "defs.h"
 
 char *cmdstr = "01234SWDXACR\r\n\033KQUH";   /* for pointer */

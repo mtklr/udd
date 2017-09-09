@@ -7,6 +7,8 @@
  *
  */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "defs.h"
 
 int dgn_nomove(cmd)

@@ -11,12 +11,15 @@
 
 #define MAIN
 
-#include "defs.h"
-#include "data.h"
-#include <stdio.h>
-#include <strings.h>
 #include <ctype.h>
 #include <pwd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <time.h>
+#include <unistd.h>
+#include "defs.h"
+#include "data.h"
 
 main(argc, argv)
 

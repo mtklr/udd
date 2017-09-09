@@ -8,6 +8,7 @@
  */
 
 #include <stdio.h>
+#include <unistd.h>
 #include "defs.h"
 
 char buf[BUFSIZ];

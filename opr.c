@@ -8,12 +8,16 @@
  * Operator program version:  */
 #define VERS "OPR  V2.1C-03  26-Oct-89"
 
-#include "defs.h"
-#include <stdio.h>
 #include <ctype.h>
 #include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/file.h>
+#include <time.h>
+#include <unistd.h>
+#include "defs.h"
 
 static int loaded = NOPE;
 

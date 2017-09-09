@@ -7,10 +7,11 @@
  *
  */
 
-#include "defs.h"
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/file.h>
+#include <unistd.h>
+#include "defs.h"
 
 void dlvl_init()
 

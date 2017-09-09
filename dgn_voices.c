@@ -7,6 +7,9 @@
  *
  */
 
+#include <stdio.h>
+#include <stdlib.h>
+
 #define NVOCS 12
 #define ADDDIR 9
 

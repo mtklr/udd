@@ -7,10 +7,13 @@
  *
  */
 
-#include "defs.h"
-#include <stdio.h>
-#include <math.h>
 #include <ctype.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include "defs.h"
 
 /*char *color[] = { "white", "green", "blue", "red", "black" };*/
 char *color[] = { "white", "blue", "green", "red", "black" };

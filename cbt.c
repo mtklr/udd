@@ -8,10 +8,13 @@
  */
 
 #define CBTMAIN
+#include <ctype.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "defs.h"
 #include "cbt.h"
-#include <math.h>
-#include <ctype.h>
 
 struct slev fns[4] = {
   {ms1, cs1},
