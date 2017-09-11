@@ -143,11 +143,11 @@ int utl_death()
     u.c[34]--;
     u.c[4]--;
     if (u.c[4] == 0 || roll(1,10) > u.c[4])
-      printf("It failed!! [%d spell%s left]\r\n", u.c[34], 
+      printf("It failed!! [%ld spell%s left]\r\n", u.c[34], 
              (u.c[34] == 1) ? "" : "s");
     else {
       u.c[11] = roll(1,u.c[10]);
-      printf("You're alive with %d hit points, and a constitution of %d.\r\n",
+      printf("You're alive with %ld hit points, and a constitution of %ld.\r\n",
               u.c[11], u.c[4]);
       u.c[64] = DGN_PROMPT;
       return(NOPE);
@@ -180,6 +180,7 @@ int utl_death()
   printf("Exit\r\n");
   printf("Fare well, brave sire.\r\n");
   unix_exit(0);
+  return(0);
 }
 
 
@@ -189,18 +190,18 @@ void utl_stat()
   int i;
   printf("%s\r\n", u.n[0]);
   for (i = 0 ; i < 6 ; i++)
-    printf("%.3s  %02d\r\n", st + 3*i, u.c[i+1]);
+    printf("%.3s  %02ld\r\n", st + 3*i, u.c[i+1]);
 }
 
 void utl_status()
 
 {
-  printf("\r\nLevel\t\t%d\r\n", u.c[8]);
-  printf("Experience\t%d\r\n", u.c[9]);
-  printf("Gold found\t%d\r\n", u.c[12]);
-  printf("Hit points\t%d\r\n\n", u.c[11]);
+  printf("\r\nLevel\t\t%ld\r\n", u.c[8]);
+  printf("Experience\t%ld\r\n", u.c[9]);
+  printf("Gold found\t%ld\r\n", u.c[12]);
+  printf("Hit points\t%ld\r\n\n", u.c[11]);
   if (u.c[31]+u.c[32]+u.c[33]+u.c[34] != 0)
-    printf("Spells: %d  %d  %d  %d\r\n", u.c[31], u.c[32], u.c[33], u.c[34]);
+    printf("Spells: %ld  %ld  %ld  %ld\r\n", u.c[31], u.c[32], u.c[33], u.c[34]);
   else
     printf("Spells: <none>\r\n");
   printf("\n");
@@ -211,19 +212,19 @@ void utl_eqp()
 {
   printf("\r\nEquipment:\r\n\n");
   if (u.c[22] >= 0)
-    printf("%s%s +%d\n\r", (u.c[22] > 0) ? "Magic " : "",
+    printf("%s%s +%ld\n\r", (u.c[22] > 0) ? "Magic " : "",
       wep[u.c[7]], u.c[22]);
   if (u.c[23] >= 0)
-    printf("%s%s Armor +%d\n\r", (u.c[23] > 0) ? "Magic " : "",
+    printf("%s%s Armor +%ld\n\r", (u.c[23] > 0) ? "Magic " : "",
       arm[u.c[7]], u.c[23]);
   if (u.c[24] >= 0)
-    printf("%sShield +%d\n\r", (u.c[24] > 0) ? "Magic " : "", u.c[24]);
+    printf("%sShield +%ld\n\r", (u.c[24] > 0) ? "Magic " : "", u.c[24]);
   if (u.c[51] > 0)
-    printf("Ring of regeneration +%d\r\n", u.c[51]);
+    printf("Ring of regeneration +%ld\r\n", u.c[51]);
   if (u.c[52] > 0)
-    printf("Elven cloak +%d\r\n", u.c[52]);
+    printf("Elven cloak +%ld\r\n", u.c[52]);
   if (u.c[53] > 0)
-    printf("Elven boots +%d\r\n", u.c[53]);
+    printf("Elven boots +%ld\r\n", u.c[53]);
   if (u.c[50] == 1)
     printf("\r\n\007The ORB\r\n");
   printf("\r\n");
@@ -355,7 +356,7 @@ void utl_adj_st()
   if (i1 == 1)
     i3 = -i3;
   u.c[i2] += i3;
-  printf("It is now %d.\r\n", u.c[i2]);
+  printf("It is now %ld.\r\n", u.c[i2]);
   if (chr_save(NOPE) != YEP) 
     printf("[Strange, I can't check point your character!]\n\r");
 }

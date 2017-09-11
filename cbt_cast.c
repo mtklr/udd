@@ -315,7 +315,7 @@ int s;
       tmp = 0.5 * u.c[11];
       if (tmp < 1)
 	tmp = 1;
-      printf("It backfired: you suffer %d hit point%s.\n\r",
+      printf("It backfired: you suffer %ld hit point%s.\n\r",
 	     u.c[11] - tmp, (u.c[11] - tmp == 1) ? "" : "s");
       u.c[11] = tmp;
       break;
@@ -430,7 +430,7 @@ int s;
     u.c[11] += roll(1,6) + 1;
     if (u.c[11] > u.c[10]) 
       u.c[11] = u.c[10];
-    printf("You now have %d hit point%s.\r\n", u.c[11], 
+    printf("You now have %ld hit point%s.\r\n", u.c[11],
 	   (u.c[11] == 1) ? "" : "s");
     break;
   case 4:          /* turn undead */
@@ -503,7 +503,7 @@ int s;
     u.c[11] += roll(2,6) + 2;
     if (u.c[11] > u.c[10])
       u.c[11] = u.c[10];
-    printf("You now have %d hit points.\r\n", u.c[11]);
+    printf("You now have %ld hit points.\r\n", u.c[11]);
     break;
   case 2:          /* dispell */
     cbt_chk();
@@ -532,7 +532,7 @@ int s;
     dead = 1;
     if (roll(1, 10) == 1 && u.c[11] > 1) {
       tmp = u.c[11] / 2.0;   /* XXX CDC used be auto-kill */
-      printf("You caught it too!! You suffer %d hit point%s.\r\n",
+      printf("You caught it too!! You suffer %ld hit point%s.\r\n",
 	     u.c[11] - tmp, (u.c[11] - tmp) == 1 ? "" : "s");
       u.c[11] = tmp;
     }

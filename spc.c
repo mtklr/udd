@@ -96,7 +96,7 @@ int spc_main()
       break;
     }
     u.c[12] -= tmp;
-    printf("It cost %d gold, you have %d left.\r\n", tmp, u.c[12]);
+    printf("It cost %d gold, you have %ld left.\r\n", tmp, u.c[12]);
     sav = u.c[15];
     u.c[15] = tmp2;
     utl_inilvl();
@@ -215,14 +215,14 @@ int spc_main()
       u.c[11] += roll(1, 3 * u.c[15]);
       if (u.c[11] > u.c[10])
 	u.c[11] = u.c[10];
-      printf("You now have %d hit points.\r\n", u.c[11]);
+      printf("You now have %ld hit points.\r\n", u.c[11]);
       break;
     }
     if (dtmp <= 0.1 * tmp) {
       printf("Poison!  Gurgle..  ..  ..   .\r\n");
       if (cbt_ohitu(u.c[15]) == YEP)
 	return(YEP);
-      printf("You only have %d hit point%s.\r\n", u.c[11], 
+      printf("You only have %ld hit point%s.\r\n", u.c[11],
 	     (u.c[11] == 1) ? "" : "s");
       break;
     }
@@ -295,7 +295,7 @@ int spc_main()
       if (tmp == '\r') {
 	printf("\r\n");
       alt_top3:
-	printf("How much of your %d gold ? ", u.c[12]);
+	printf("How much of your %ld gold ? ", u.c[12]);
 	unix_tty_cook();
         if (!fgets(tmpbuf, NAMELEN, stdin))
           strcpy(tmpbuf, "\n");
@@ -500,7 +500,7 @@ trash:
     if (u.c[58] == 0)
       u.c[58] = roll(1,4) + 10 * roll(1,4);
     if(u.c[61] == 1) {
-      printf("[Combo = %d]\r\n", u.c[58]);
+      printf("[Combo = %ld]\r\n", u.c[58]);
     }
   saf_top1:
     printf("You see a small door with four colored lights in a row.\r\n");

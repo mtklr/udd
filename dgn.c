@@ -132,7 +132,7 @@ int dgn_main()
       dgn_voices();
       valid = 0;
       if (u.c[61] == 1)
-        printf("X=%d, Y=%d\r\n", u.c[16], u.c[17]);
+        printf("X=%ld, Y=%ld\r\n", u.c[16], u.c[17]);
     dgn_no:
       while (valid == 0) {
 	printf("->");
@@ -204,7 +204,7 @@ int dgn_main()
 	u.c[64] = DGN_NEWLOC;
       break;
     default:
-      printf("panic: dgn ERROR!  Unknown command: %d\n\r", u.c[64]);
+      printf("panic: dgn ERROR!  Unknown command: %ld\n\r", u.c[64]);
       unix_exit(1);
     }
   }

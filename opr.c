@@ -552,7 +552,7 @@ opr_main()
       }
       printf("Current value is:\r\n");
       if (tmp2 == 'A') 
-	printf("  u.c[%d] = %d\r\n", tmp, u.c[tmp]);
+	printf("  u.c[%d] = %ld\r\n", tmp, u.c[tmp]);
       else
 	printf("  u.n[%d] = %s\r\n", tmp, u.n[tmp]);
       printf("New value (<cr> to keep old) ? ");

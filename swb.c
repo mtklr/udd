@@ -21,7 +21,7 @@
 #include "defs.h"
 #include "data.h"
 
-main(argc, argv)
+int main(argc, argv)
 
 int argc;
 char **argv;
@@ -40,7 +40,7 @@ char **argv;
   srandom(time(0));
   dfd = n_dlvl = -1;
   if (argc != 1) {
-    printf("%s: This command takes no options.\r\n");
+    printf("%s: This command takes no options.\r\n", ddd);
     exit(1);
   }
   if (alevel == NOPE) {
@@ -485,7 +485,7 @@ char **argv;
       printf("\r\n");
       break;
     default:
-      printf("\r\n%d: This can't happen!\r\n", ddd);
+      printf("\r\n%s: This can't happen!\r\n", ddd);
     }
   }
 }

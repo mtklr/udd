@@ -78,11 +78,11 @@ int trs_obj()
 	break;
       }
       if (u.c[22] > u.c[63]) {
-	printf("You already have a %s +%d.\r\n", wep[u.c[7]], u.c[22]);
+	printf("You already have a %s +%ld.\r\n", wep[u.c[7]], u.c[22]);
 	break;
       }
       u.c[22]++;
-      printf("You have found a %s%s +%d.\r\n", 
+      printf("You have found a %s%s +%ld.\r\n",
 	     (u.c[22] > 0) ? "Magic " : "", wep[u.c[7]], u.c[22]);
       break;
     case 2:        /* arm */
