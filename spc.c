@@ -90,7 +90,7 @@ int spc_main()
       printf("Try again bird brain\007!\r\n");
       goto exc_top;
     }
-    tmp = (abs(u.c[15] - tmp2) + 1) * ((tmp2 * u.c[15])/2.0) * 25;
+    tmp = (labs(u.c[15] - tmp2) + 1) * ((tmp2 * u.c[15])/2.0) * 25;
     if (tmp > u.c[12]) {
       printf("You need %d gold for that trip.\r\n", tmp);
       break;
@@ -114,7 +114,7 @@ int spc_main()
     u.c[63] = fni(u.l[tmp][tmp2]);
     if (roll(3,7) > (u.c[2] + u.c[3]) / 2) {
       printf("The transporter malfunctioned!\r\n");
-      if (cbt_ohitu((abs(sav - u.c[15])+0.5*(u.c[15] +sav)) *
+      if (cbt_ohitu((labs(sav - u.c[15])+0.5*(u.c[15] +sav)) *
 		     (rnd() * rnd() * rnd() / 2.0)) == YEP)
 	return(YEP);
     }
