@@ -178,6 +178,7 @@ int flag;
 
 {
   int lcv, lcv3, x, y;
+  char spl[44] = "LGHTPROTSHLDPRAYDTRPSLNCLEVTSTRGFEARINVSTMST";
   if (flag == YEP) {
     for (lcv = 37; lcv <= 47 ; lcv++)
       if (u.c[lcv] > 0)
@@ -190,8 +191,12 @@ int flag;
   x = u.c[16];
   y = u.c[17];
   for (lcv = 0 ; lcv < 11 ; lcv++) {
-    if (u.c[SPLBASE+lcv] > 0)
-      printf("%.4s:", lcv*4 + "LGHTPROTSHLDPRAYDTRPSLNCLEVTSTRGFEARINVSTMST");
+    if (u.c[SPLBASE+lcv] > 0) {
+      for (int i = 0; i < 4; i++) {
+        printf("%c", spl[lcv*4+i]);
+      }
+        printf(":");
+    }
   }
   printf("\r\n\n");
   for (lcv = -1 ; lcv <= 2 ; lcv++)

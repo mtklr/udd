@@ -221,24 +221,27 @@ int opr_main()
 	break;
       }
       dlvl_loadum(dgn, lvl);
+      char amap[4]  = " -=~";
+      char bmap[4]  = " |!:";
+      char cmap[17] = " abcdefghijklmnop";
       for (tmp = 1; tmp <= 20 ; tmp++) {
 	for (lcv = 1 ; lcv <= 20; lcv++) 
 	  if (tmp2 == 'X')
-	    fprintf(fp, " %1.1s"," -=~" + 
-		    ((dd.dmap[(tmp - 1) * 20 + (lcv - 1)] / 4) & 3));
+	    fprintf(fp, " %c",
+		    amap[((dd.dmap[(tmp - 1) * 20 + (lcv - 1)] / 4) & 3)]);
 	  else
 	    fprintf(fp," %s", 
 		    (((dd.dmap[(tmp - 1) * 20 + (lcv - 1)] / 4) & 3) == 1) ?
 		    "_" : " ");
 	fprintf(fp, "\r\n");
 	for (lcv = 1 ; lcv <= 20 ; lcv++) {
-	  fprintf(fp,"%1.1s", " |!:" + 
-		  (dd.dmap[(tmp - 1) * 20 + (lcv - 1)] & 3));
+	  fprintf(fp,"%c",
+		  bmap[(dd.dmap[(tmp - 1) * 20 + (lcv - 1)] & 3)]);
 	  if (dd.dmap[(tmp - 1) * 20 + (lcv - 1)] / 16 == 0)
 	    fprintf(fp," ");
 	  else
-	    fprintf(fp,"%1.1s", " abcdefghijklmnop" + 
-		    dd.dmap[(tmp - 1) * 20 + (lcv - 1)] / 16);
+	    fprintf(fp,"%c",
+		    cmap[dd.dmap[(tmp - 1) * 20 + (lcv - 1)] / 16]);
 	}
 	fprintf(fp, "| %d\r%s", tmp, (tmp2 == 'X') ? "\n" : "");
       }
