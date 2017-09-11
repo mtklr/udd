@@ -26,6 +26,7 @@ int dam;
     u.i[6] = 0;
     dead = 1;
   }
+  return(0);
 }
 
 int cbt_ohitu(dam)

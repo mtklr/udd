@@ -208,4 +208,5 @@ int dgn_main()
       unix_exit(1);
     }
   }
+  return(0);
 }

@@ -21,7 +21,7 @@
 
 static int loaded = NOPE;
 
-opr_main()
+int opr_main()
 
 {
   int tmp, tmp2, tmp3;
@@ -576,4 +576,5 @@ opr_main()
       break;
     }
   }
+  return(0);
 }
