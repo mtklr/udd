@@ -398,7 +398,7 @@ int s;
       hflag = 0;
       m = 20;
       m1 = u.c[8] + 5;
-      m2,m2_old = roll(m1, 16);
+      m2 = m2_old = roll(m1, 16);
       m_str = roll(1, mm[m].m);
       m_arm = roll(1,m1) - 1;
       gone = dead = 0;

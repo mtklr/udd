@@ -39,7 +39,7 @@ void unix_init()
   TTY_GET(&out);
   TTY_GET(&cur);
   signal(SIGINT, SIG_IGN);
-  /*signal(SIGQUIT, SIG_IGN); /*DEBUG XXX CDC CORE DUMP*/
+  //signal(SIGQUIT, SIG_IGN); /*DEBUG XXX CDC CORE DUMP*/
   signal(SIGHUP, sighup);
 #ifdef SIGTSTP
   signal(SIGTSTP, sigstop);

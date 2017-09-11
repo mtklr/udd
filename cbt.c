@@ -290,13 +290,14 @@ int cbt_main()
 	}
 	if (d == 0)
 	  d = roll(1, mm[m].m) + m1;
-	if (m == 19)  /* balrog */
-	  if (roll(1,3) < 3) 
+	if (m == 19) { /* balrog */
+	  if (roll(1,3) < 3) {
 	    printf("The %s uses it's sword!\r\n", mnam);
-	  else {
+	  } else {
 	    printf("The %s uses it's whip!\007\r\n", mnam);
 	    d *= 1.5;
 	  }
+	}
 	if (u.c[61] == 1)
 	  printf("FORCE: %d\r\n", d);
 	d -= 1 + roll(1, u.c[24]);
