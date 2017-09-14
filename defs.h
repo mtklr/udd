@@ -38,15 +38,33 @@
  *        LVL - dungeon structure file
  */
 
+#ifndef FIL_CHR
 #define FIL_CHR "./char.dat"
+#endif
+#ifndef FIL_CHR_LK
 #define FIL_CHR_LK "char.lck"
+#endif
+#ifndef FIL_CHR_LD
 #define FIL_CHR_LD "."
+#endif
+#ifndef FIL_NOT
 #define FIL_NOT "./not.txt"
+#endif
+#ifndef FIL_ORB
 #define FIL_ORB "./orb.txt"
+#endif
+#ifndef FIL_INS
 #define FIL_INS "./ins.txt"
+#endif
+#ifndef FIL_LVL
 #define FIL_LVL "./lvl.dat"
+#endif
+#ifndef FIL_LVL_LK
 #define FIL_LVL_LK "lvl.lck"
+#endif
+#ifndef FIL_LVL_LD
 #define FIL_LVL_LD "."
+#endif
 
 /* UID to access operator mode. */
 #ifndef WIZ_UID
