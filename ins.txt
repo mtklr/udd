@@ -1,1 +1,543 @@
-Instructions
+  Welcome to 'udd', a computer fantasy role playing game.  You will find that
+this is somewhat more than just a clever computer game, that the characters
+you create may contain a tiny bit of yourself, and that the urge to return and
+explore just one more level down, if not carefully controlled, can begin to
+take precedence over work, family, eating, sleeping...
+
+  If you still wish to go on, I will help you create a character who will bear
+your weapons and armor and accompany you into a labyrinthine dungeon filled
+with fearsome monsters, fabulous treasure and frightful perils.
+
+  If you are patient and skillfull, your character will live to grow in power
+and wealth, and will be able to explore deeper and deeper into uncharted
+regions from which few return.  But be warned!  If you are too bold or too
+greedy, you won't survive long.
+
+  As long as it remains alive, your character will remain in the character
+file, waiting for you to return and bring it to life.
+
+    Characters have these attributes:
+
+        Type                    Strength
+        Level                   Intelligence
+        Experience              Wisdom
+        Gold                    Constitution
+        Hit points              Dexterity
+        Spells                  Charisma
+        Dungeon                 Magic possessions
+
+  Most of these attributes are displayed during your expedition.  It is often
+quite important to watch them, as you will see.
+
+TYPE
+
+There are three character types:  fighter, magician, and cleric.  Each has
+some advantages and disadvantages.  Fighters are much better in combat and
+harder to kill, but magicians and clerics can cast spells.
+
+LEVEL
+
+Level is a general indicator of your character's overall power.  It is
+determined by experience and determines hit points and spells.  There is
+essentially no limit to the level a character can attain.
+
+EXPERIENCE
+
+Experience is gained by killing monsters (immediate) and gathering treasure
+(cumulative).  In order to advance a level, you must double your experience.
+This total is updated continually during your expedition, therefore you may
+advance a level at any time.
+
+GOLD
+
+Each treasure you find is worth some amount of gold.  A temporary running
+total is kept during your expedition and added to your permanent total when
+you leave the  dungeon.  A portion of your temporary total also is added to
+your experience.  Your permanent gold total is used to buy weapons,
+transportation between dungeons, etc.
+
+HIT POINTS
+
+Hit points represent the number of wounds you can absorb in combat.  Each time
+you advance a level, they increase.  You should watch this number very
+carefully in combat as you don't want to let it fall within range of a fatal
+blow.  If you are lucky enough to find a magic ring, it will recover some lost
+hit points for you each time you move.
+
+SPELLS
+
+Four levels of six spells each are available to magicians and clerics.  Also,
+fighters can find magic wands which can give the finder the ability to cast
+spells.  Spells can be cast at any time.  Each time your character gains a
+level you will be granted more and higher level spells.
+
+DUNGEON
+
+There are two dungeons supplied with UDD:  Crestwood and Squire's Hole.
+
+STRENGTH
+
+Strength is of great importance to fighters as it partially determines how
+well they can fight.  Magicians and clerics, however, do tend to run out of
+spells every now and then...
+
+INTELLIGENCE
+
+Intelligence is critical for magicians.  It determines the power of spells.
+
+WISDOM
+
+Wisdom means to clerics what intelligence does to magicians.
+
+CONSTITUTION
+
+Of all the initial attributes, constitution is the most important to all as it
+determines hit points.
+
+DEXTERITY
+
+Dexterity is also very important as it determines the probability of blows
+landing, spells working, and the ability to avoid falling in pits, etc.
+
+CHARISMA
+
+Charisma controls the ability to cast some spells.
+
+MAGIC POSSESSIONS
+
+Previous adventurers who were not fortunate enough to return alive have left
+all sorts of valuable possessions in the dungeon.  You may find weapons,
+armor, shields or even elven boots and cloaks.  All of these things will help
+you but none so much as a magic ring of regeneration, which recovers some lost
+hit points each time you move, allowing you to wander far from the safety of
+the entrance.
+
+
+  When you enter the dungeon for the first time, stay near the entrance and by
+no means, fight dragons or anything else higher than level 1.  If you lose
+more than a couple of hit points, evade if you can and run!  If you reach the
+door, your hit points and spells will be returned.
+
+  I can't tell you too much more about what you will find in those dark and
+slimy passages.  I am not stupid, er, brave enough go inside myself, but of
+those who have ventured within and returned alive, some have muttered of being
+suddenly transported to another room nearby, or of finding magnificent thrones
+with magic runes, and colored fountains which may grant great favor or great
+harm.
+
+  Many creatures have inhabited these caverns since their creation, somewhere
+in the mists of time, and most of them were quite evil or disgusting.  One old
+story tells of an order of demented monks who built altars which still exist,
+although partly in this world and partly in theirs.  Another tells of dwarves
+who made secret doors which may be seen only if you happen to stand in the
+right spot.
+
+  But the legend that holds the most interest for fools, I mean adventurers
+such as yourself is that of the orb, an enormous eye-shaped gem which, if
+gazed into, grants its finder immortality.  They say it was created and hidden
+by a mad wizard long, long ago and still waits deep in the musty tunnels and
+dank caverns, guarded by enormous dragons and, er, well, never mind.
+
+  The last and best advice I can give you is to use the keypad with one hand
+and map your route with the other.  Some have found a pad of graph paper
+useful.  If you don't make a map, you will surely become lost and die.  I have
+warned uncounted novice adventurers in the past, most rooms and passages look
+the same in the dark.  But they never listen ...
+
+  If you need help during your expedition, type 'H'.
+
+When you get the "->" prompt the following keys are meaningful:
+
+
+        W=North                                 8=North
+A=West  S=Stay  D=East                 4=West   5=Stay   6=East
+        X=South                                 2=South
+
+
+Other keys:
+    H     Help (type this list)
+    C     Cast spell
+    R     Drop the ORB if you've got it
+    <CR>  List stats and equipment
+    <LF>  List experience, gold, hits, and spells
+    <ESC> Replot your position
+    K     Fall on your sword
+    Q     Temporarily quit expedition
+          (it will be restarted where you left)
+    U     Utter a prayer for escape to the Nameless God
+
+
+                                    ***
+
+
+SPELLS AND MAGIC
+
+  There are two classes of spells: Those that last for a while, and those that
+don't.  In each of these classes are two further distinctions: Spells that are
+meant for use in combat, and those that aren't.
+
+  Combat spells are flagged with a '*'.  These may or may not work, depending
+on the relative levels of the spell caster and his target.  If the opponent is
+a great deal more powerful than the Magic-User or Cleric, it is very highly
+resistant to the latter's magicking.  The formula for spell efficacy varies
+from spell to spell, and contains a random factor.
+
+  Some spells become more effective as the Magic-User or Cleric increases in
+power.  Spells such as Lightning Bolt use the caster's level as a base number
+of points delivered, and then add on a random factor.  If this is the case,
+the spell description mentions the exact formula.
+
+  Each spell is described briefly, and is labeled 'Combat,' if applicable.  In
+addition, each is labeled either 'Immediate' or 'Duration.' The former do
+whatever it is that they do RIGHT NOW, while the latter's effects take a
+little while to disperse.
+
+
+                        Magic-User Spells:
+
+                Level 1                         Level 2
+                -------                         -------
+            1*  Magic Missile               1*  Phantasmal Forces
+            2*  Charm Monster               2*  Web
+            3   Shield                      3*  Lightning Bolt
+            4*  Sleep                       4   Strength
+            5   Protection from Evil        5   Levitate
+            6   Light                       6   Invisibility
+
+                Level 3                         Level 4
+                -------                         -------
+            1*  Fireball                    1   Teleport
+            2*  Confusion                   2*  Power Word KILL
+            3   Pass Wall                   3*  Prismatic Wall
+            4*  Hold Monster                4   Time Stop
+            5   Fear                        5*  Pillar of Fire
+            6   Continual Light             6*  Summon Demon
+
+* - Combat Spells
+
+
+                        First Level Spells:
+
+*Magic Missile:         Fires a magical dart from the caster's finger.  This
+        (Immediate)     does not miss, and does 1-6 points of damage.
+
+*Charm Monster:         Basically, this hypnotizes the caster's opponent,
+        (Immediate)     which therefore neither attacks nor dodges.  This
+                        spell is easily broken, however.
+
+Shield:                 Creates an invisible wall around the caster, causing
+        (Duration)      any monster attacking to do so at a disadvantage.
+
+*Sleep:                 Puts the caster's opponent into a deep sleep.  While
+        (Immediate)     sleeping, it neither attacks nor dodges (obviously).
+
+Protection from Evil:   Causes the caster's opponent to attack at a
+        (Duration)      disadvantage.
+
+Light:                  Creates a point-source light, equivalent to one torch,
+        (Duration)      over the caster's head.  Effects are cumulative.
+
+
+                        Second Level Spells:
+
+*Phantasmal Force:      Causes the caster's opponent to believe it is
+        (Immediate)     confronting a creature much mightier than itself.  This
+                        often causes flight.
+
+*Web:                   Entangles the caster's opponent in a magical net,
+        (Immediate)     making it helpless to attack or defend itself.
+
+*Lightning Bolt:        Delivers (level) + 2-16 points of electrical damage to
+        (Immediate)     the caster's opponent.
+
+Strength:               Temporarily augments the caster's Strength attribute,
+        (Duration)      improving his/her combat skill commensurately.
+
+Levitate:               Causes the caster to float off the floor, making
+        (Duration)      him/her harder to hit.
+
+Invisibility:           Strangely enough, causes the caster to fade from sight.
+        (Duration)      This puts monsters at a decided disadvantage.
+
+
+                        Third Level Spells:
+
+*Fireball:              Causes a fiery explosion in the vicinity of the
+        (Immediate)     caster's opponent.  Does (level) + 4-24 points of fire
+                        damage.
+
+*Confusion:             Causes the caster's opponent to lose clarity of mind,
+        (Immediate)     with attendant co-ordination.  It cannot attack.  Spell
+                        lasts for (level) + 1-6 rounds.
+
+Pass Wall:              Shifts the molecular structure of the desired wall such
+        (Immediate)     that it becomes as air, allowing passage through it.
+
+*Hold Monster:          Mesmerises the caster's opponent so that it cannot
+        (Immediate)     attack or dodge.
+
+Fear:                   Causes the caster's opponent to become fearful of
+        (Duration)      him/her, and attack at a disadvantage.
+
+Continual Light:        Same as a Light spell, save that this is twice as
+        (Duration)      bright and lasts for the duration of the adventure.
+
+
+                        Fourth Level Spells:
+
+Teleport:               Transports, instantly, the caster from where he is to
+        (Immediate)     somewhere else.  The caster has no control of the
+                        destination.
+
+*Power Word KILL:       Your basic Death Spell.  Causes the caster's opponent to
+        (Immediate)     drop dead on the spot.
+
+*Prismatic Wall:        Encases the caster in a multicoloured sphere of
+        (Immediate)     protection, possibly destroying any attacking monster.
+
+Time Stop:              Freezes Time in the caster's vicinity, while permitting
+        (Duration)      him/her to move freely.  Monsters cannot fight back.
+
+*Pillar of Fire:        Causes the caster's target to be immolated in a pillar
+        (Immediate)     of flames.
+
+*Summon Demon:          Calls one of Hell's denizens to the caster's aid.  The
+        (Immediate)     demon will attempt to drag the caster's antagonist back
+                        to Hell with it.
+
+
+                                    ***
+
+
+                            Clerical Spells:
+
+                Level 1                         Level 2
+                -------                         -------
+        1   Protection from Evil            1   Detect Traps
+        2   Light                           2   Silence
+        3   Cure Light Wounds               3   Pray
+        4*  Turn Undead                     4*  Hold Monster
+
+                Level 3                         Level 4
+                -------                         -------
+        1   Cure Serious Wounds             1*  Holy Word
+        2*  Dispell Undead                  2*  Finger of Death
+        3   Continual (Bright) Light        3*  Blade Barrier
+        4*  Plague                          4   Raise Dead
+
+* - Combat Spells
+
+
+                        First Level Spells:
+
+Protection from Evil:   Causes monsters to be at a disadvantage on attacks.
+        (Duration)
+
+Light:                  Creates a point-source of light, equivalent to one
+        (Duration)      torch, to appear over the caster's head.  Multiple
+                        applications of this spell increase visibility.
+
+
+Cure Light Wounds:      Heals 2-7 points of damage incurred by the caster.
+        (Immediate)
+
+*Turn Undead:           Causes undead creatures to run away in sheer terror.
+        (Immediate)
+
+
+                        Second Level Spells:
+
+Detect Traps:           Increases, for the duration of the spell, the caster's
+        (Duration)      ability to find traps in loot, such as an exploding
+                        Chest.
+
+
+Silence:                Puts attacking monsters at a disadvantage, and lowers
+        (Duration)      the probability of encountering Wandering Monsters.
+
+
+Prayer:                 Gives the caster an advantage when attacking; i.e.,
+        (Duration)      makes it easier for him/her to hit his/her opponent.
+
+
+*Hold Monster:          Causes the caster's opponent to be HELD (temporarily
+        (Immediate)     placed in stasis).  A HELD monster cannot fight back,
+                        noro can it dodge.
+
+
+                        Third Level Spells:
+
+Cure Serious Wounds:    Heals 4-14 points of damage to the caster.
+        (Immediate)
+
+*Dispell Undead:        Causes undead creatures to be utterly annihilated.
+        (Immediate)
+
+Continual Light:        Causes a bright point-source of light to appear above
+        (Duration)      the caster's head.  This light will remain for the
+                        duration of the adventure.  See also LIGHT (1st Level).
+
+*Plague:                Causes the caster's opponent to contract a combination
+        (Immediate)     of several deadly diseases, which will kill it in one
+                        round.  CAUTION: THE CASTER MAY CONTRACT THE PLAGUE AS
+                        WELL!!!
+
+
+                        Fourth Level Spells:
+
+*Holy Word:             Banishes the caster's opponent to eternal damnation.
+        (Immediate)
+
+*Finger of Death:       Imbues the caster's finger (which is immediately
+        (Immediate)     applied to the opponent) with such unspeakable
+                        God-granted power that living things cannot contain
+                        it.  Therefore, they die instantly.
+
+*Blade Barrier:         Causes a circular wall of flashing, moving swords to
+        (Immediate)     appear around the caster.  This wall increases in
+                        diameter with great rapidity, catching and destroying
+                        any attacking monster.
+
+Raise Dead:             Attempts to bring the caster back from the dead.
+        (Immediate)
+
+
+                                    ***
+
+
+MONSTERS
+
+  The dungeons below have been inhabited by many creatures since the time of
+creation.  They are mean and vicious and deranged beyond all imagination.  If
+you insist upon entering, the following pages will give you some information
+about the foes you may encounter.
+
+
+SKELETON
+
+  Re-animated bones of the dead that mindlessly obey their evil masters.  They
+are unaffected by SLEEP or CHARM spells.
+
+
+ZOMBIE
+
+  Human corpses given new "life" by sinister magic.  They are unaffected by
+SLEEP or CHARM spells.
+
+
+GHOUL
+
+  Ghouls are "undead", once human creatures which feed on human and other
+corpses.  They are uneffected by either SLEEP or CHARM spells.  The magic
+circle of protection from evil keeps these monsters completely at bay.
+
+
+WRAITH
+
+  Incorporeal, weightless apparitions born of evil and darkness.  They are
+unaffected by SLEEP or CHARM spells.
+
+
+SPECTRE
+
+  Akin to a Wraith, but more powerful.  They are unaffected by SLEEP or CHARM
+spells.
+
+
+VAMPIRE
+
+  The vampire is the most dreaded of the undead.  Their great strength is
+derived from the blood of their victims.  SLEEP and CHARM spells have no
+affect on them.
+
+
+KOBOLD
+
+  A dog-faced, two-legged creature approximately three feet tall.  They are
+reasonably well armed, but never-the-less, are not too difficult to kill.
+
+
+GNOLL
+
+  An evil, hyena-headed, carnivorous humanoid, over 7 feet tall, with dirty
+yellow or reddish-brown fur.
+
+
+GOBLIN
+
+  A short (four foot tall) creature with large forearms and hands.  Their
+average intelligence and lack of special attacks or defenses makes them only
+slightly more resistant a foe than the Kobold.
+
+
+ORC
+
+  This boar-faced, upright creature is fierce.  They are of average size
+(about six feet tall) but with long upper limbs.  They live for about forty
+years.
+
+
+DWARF
+
+  The dwarf is a human looking creature.  Although only 4 or so feet tall,
+they weigh no less than 150 pounds due to their stocky build.  They live 350
+years on the average.
+
+
+HARPIE
+
+  Harpies have the bodies of vutures but the upper torsos and heads of women.
+The touch or sound of a harpie is extremely difficult to resist.  They are of
+average size.
+
+
+FIGHTER
+
+  An intrepid warrior that revels in the thrill of danger, with skills that
+are honed to deadly perfection.
+
+
+BUGBEAR
+
+  The bugbear is approximately seven feet tall and is armed with an assorted
+collection of mismatched weapons and armor.  They are dangerous foes however,
+because of their clumsy manner disguises their lightning quickness.
+
+
+DOPPLEGANGER
+
+  These two-legged creatures have the ability to take on whatever shape they
+choose.  In combat they typically will assume the appearance of their
+opponent.  They are subject to neither SLEEP nor CHARM spells.
+
+
+MINOTAUR
+
+  Minotaurs are large creatures having the head of a steer.  They are cunning
+and have excellent senses.
+
+
+OGRE
+
+  Ogres are over nine feet tall with low intelligence.  Their great strength
+makes them an able opponent.
+
+
+GIANT
+
+  The giant is a very large human-like creature of slow gait and questionable
+intelligence.  Its great size and strength and its single-mindedness make it a
+very dangerous creature in combat.
+
+
+BALROG
+
+  The balrog is a reptilian humanoid of exteremely large size.  They are
+fierce in combat and are difficult to kill.
+
+
+DRAGON
+
+  The dragon is a winged snake-like creature of gigantic size.  Its scales
+offer protection to all but magic weapons, and it is not often attacked by
+anything in its right senses.
