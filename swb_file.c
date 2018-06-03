@@ -8,6 +8,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include "defs.h"
 
@@ -55,4 +56,12 @@ char *msg, *file;
       printf("%s\r", buf);
   printf("\n");
   fclose(fp);
+}
+
+void swb_page(char *msg, char *file, int wiz) {
+        char buf[FILENAME_MAX];
+
+        printf("%s\r\n", msg);
+        snprintf(buf, sizeof(buf), "%s %s", PAGER, file);
+	system(buf);
 }

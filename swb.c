@@ -381,7 +381,7 @@ char **argv;
       break;
     case 'I':
       printf("Instructions\r\n");
-      swb_note("Current instruction file:", FIL_INS, wiz);
+      swb_page("Current instruction file:", FIL_INS, wiz);
       break;
     case 'E':
       printf("Exit\r\n");

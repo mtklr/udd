@@ -66,6 +66,11 @@
 #define FIL_LVL_LD "."
 #endif
 
+/* pager for instructions */
+#ifndef PAGER
+#define PAGER "/usr/bin/less"
+#endif
+
 /* UID to access operator mode. */
 #ifndef WIZ_UID
 #define WIZ_UID 54171
@@ -180,7 +185,7 @@ extern char *fnp(), *fnp1();
 extern int lock_open(), lock_close();
 extern int ms1(), ms2(), ms3(), ms4();
 extern int opr_main(), optout(), roll();
-extern void sighup(), sigstop(), swb_note();
+extern void sighup(), sigstop(), swb_note(), swb_page();
 extern int spc_main(), swb_ppnok(), swb_wiz(), trs_chest(), trs_main(), 
   trs_obj();
 extern char *unix_date();

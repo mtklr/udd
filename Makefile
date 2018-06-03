@@ -5,6 +5,7 @@ VERSION = 5.1C-08
 INSTALL = /usr/bin/install
 INSTALL_DATA = $(INSTALL) -m 0644
 PREFIX ?= $(shell pwd)/build
+PAGER ?= /usr/bin/less
 
 PROG = udd
 SRC = $(wildcard *.c)
@@ -26,7 +27,8 @@ CFLAGS += -O0 -g -Wall -arch i386 \
 	  -DFIL_NOT=\"$(PREFIX)/not.txt\" \
 	  -DFIL_ORB=\"$(PREFIX)/$(ORB_FILE)\" \
 	  -DFIL_INS=\"$(PREFIX)/ins.txt\" \
-	  -DWIZ_UID=$(WIZARD)
+	  -DWIZ_UID=$(WIZARD) \
+	  -DPAGER=\"$(PAGER)\"
 LDFLAGS += -arch i386
 LDLIBS = -lm
 
