@@ -125,7 +125,7 @@ int cmd;
       printf("K\tFall on your sword\n\r");
       printf("Q\tTemporarily quit expedition\n\r");
       printf("\t (it will be restarted where you left)\n\r");
-      printf("U\tUtter a pray for escape to the Nameless God\n\r");
+      printf("U\tUtter a prayer for escape to the Nameless God\n\r");
       printf("H\tHelp (type this list)\n\r");
       u.c[64] = DGN_PROMPT;
       return(NOPE);
