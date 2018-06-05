@@ -243,7 +243,7 @@ int opr_main()
 	    fprintf(fp,"%c",
 		    cmap[dd.dmap[(tmp - 1) * 20 + (lcv - 1)] / 16]);
 	}
-	fprintf(fp, "| %d\r%s", tmp, (tmp2 == 'X') ? "\n" : "");
+	fprintf(fp, "| %d\r%c", tmp, '\n');
       }
       if (tmp2 == 'X') 
 	fprintf(fp, " - - - - - - - - - - - - - - - - - - - -\r\n");
