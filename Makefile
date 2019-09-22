@@ -17,7 +17,7 @@ CHR_LOCKFILE = char.lck
 LVL_LOCKFILE = lvl.lck
 WIZARD ?= $(shell echo $$UID)
 
-CFLAGS += -O0 -g -Wall -arch i386 \
+CFLAGS += -O0 -g -Wall \
 	  -DFIL_CHR=\"$(PREFIX)/char.dat\" \
 	  -DFIL_CHR_LK=\"$(CHR_LOCKFILE)\" \
 	  -DFIL_CHR_LD=\"$(PREFIX)\" \
@@ -29,7 +29,7 @@ CFLAGS += -O0 -g -Wall -arch i386 \
 	  -DFIL_INS=\"$(PREFIX)/ins.txt\" \
 	  -DWIZ_UID=$(WIZARD) \
 	  -DPAGER=\"$(PAGER)\"
-LDFLAGS += -arch i386
+LDFLAGS +=
 LDLIBS = -lm
 
 all: $(PROG) $(DATA)

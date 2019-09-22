@@ -6,4 +6,4 @@ I've fixed enough to get it working (in macOS anyway, ymmv).
 
 Thanks to Chuck Cranor, the original author, for permission to share his code.
 
-* Only works in 32-bit mode, 64-bit crashes (TODO: fix).
+* 64-bit build works now, but is not extensively tested.

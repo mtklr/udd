@@ -138,7 +138,7 @@ struct state {
 
 struct chr {
   char nam[2][NAMELEN];
-  long int c[65];
+  int c[65];
 };
 
 struct dgnstr {
