@@ -1,13 +1,17 @@
 # udd Makefile
 
-VERSION = 5.1C-08
+CC ?= /usr/bin/cc
+RM ?= /bin/rm -f
+INSTALL ?= /usr/bin/install
+INSTALL_DATA ?= $(INSTALL) -m 0644
 
-INSTALL = /usr/bin/install
-INSTALL_DATA = $(INSTALL) -m 0644
-PREFIX ?= $(shell pwd)/build
-PAGER ?= /usr/bin/less
+PREFIX ?= $(PWD)/build
+gamesdir = $(PREFIX)/games
+datadir = $(PREFIX)/share/$(PROG)
+localstatedir = $(PREFIX)/var/games
 
 PROG = udd
+VERSION = 5.1C-08
 SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 
@@ -15,9 +19,11 @@ DATA = char.dat lvl.dat not.txt ins.txt
 ORB_FILE = orb.txt
 CHR_LOCKFILE = char.lck
 LVL_LOCKFILE = lvl.lck
+PAGER ?= /usr/bin/less
 WIZARD ?= $(shell echo $$UID)
 
-CFLAGS += -O0 -g -Wall \
+OPT ?= -Os # -O0 -g -Wall -Wextra
+CFLAGS += $(OPT) \
 	  -DFIL_CHR=\"$(PREFIX)/char.dat\" \
 	  -DFIL_CHR_LK=\"$(CHR_LOCKFILE)\" \
 	  -DFIL_CHR_LD=\"$(PREFIX)\" \
@@ -32,27 +38,29 @@ CFLAGS += -O0 -g -Wall \
 LDFLAGS +=
 LDLIBS = -lm
 
+.PHONY: all
 all: $(PROG) $(DATA)
 
 $(PROG): $(OBJ)
 	$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
+.PHONY: clean
 clean:
 	$(RM) $(PROG)
 	$(RM) *.o
 
+.PHONY: install
 install: all
-	$(INSTALL) -d $(PREFIX)
-	$(INSTALL) $(PROG) $(PREFIX)
-	$(INSTALL) -d $(PREFIX)
-	$(INSTALL_DATA) $(DATA) $(PREFIX)
-	$(INSTALL_DATA) /dev/null $(PREFIX)/$(ORB_FILE)
+	$(INSTALL) -d $(DESTDIR)$(PREFIX)
+	$(INSTALL) $(PROG) $(DESTDIR)$(PREFIX)
+	$(INSTALL) -d $(DESTDIR)$(PREFIX)
+	$(INSTALL_DATA) $(DATA) $(DESTDIR)$(PREFIX)
+	$(INSTALL_DATA) /dev/null $(DESTDIR)$(PREFIX)/$(ORB_FILE)
 
+.PHONY: uninstall
 uninstall:
-	$(RM) $(PREFIX)/$(PROG)
-	$(RM) $(foreach f,$(notdir $(DATA)),$(PREFIX)/$(f))
-	$(RM) $(PREFIX)/$(ORB_FILE)
-	$(RM) $(PREFIX)/$(CHR_LOCKFILE)
-	$(RM) $(PREFIX)/$(LVL_LOCKFILE)
-
-.PHONY: all clean install uninstall
+	$(RM) $(DESTDIR)$(PREFIX)/$(PROG)
+	$(RM) $(foreach f,$(notdir $(DATA)),$(DESTDIR)$(PREFIX)/$(f))
+	$(RM) $(DESTDIR)$(PREFIX)/$(ORB_FILE)
+	$(RM) $(DESTDIR)$(PREFIX)/$(CHR_LOCKFILE)
+	$(RM) $(DESTDIR)$(PREFIX)/$(LVL_LOCKFILE)
